@@ -100,6 +100,7 @@
                     </p>
                 </div>
             </section>
+            <button id="scrollToTopBtn">Topo</button>
         </main>
     </div>
     <footer>
@@ -115,4 +116,29 @@
         </div>
       </footer>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+            let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+            window.addEventListener("scroll", function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollToTopBtn.style.display = "block";
+                } else {
+                    scrollToTopBtn.style.display = "none";
+                }
+            });
+            scrollToTopBtn.addEventListener("click", function () {
+                scrollToTopWhile(1000);
+            });
+
+            function scrollToTopWhile(duration) {
+                const scrollStep = -window.scrollY / (duration / 15);
+                while (window.scrollY !== 0) {
+                    window.scrollBy(0, scrollStep);
+                }
+            }
+
+        });
+</script>
 </html>
