@@ -206,6 +206,28 @@ footer {
   margin: 0 10px; 
 }
 
-.links a:hover {
-  text-decoration: underline; 
+.fruits-list {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.centralizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-fruits {
+  width: 70%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
 }
